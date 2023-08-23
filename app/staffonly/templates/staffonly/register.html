@@ -1,0 +1,8 @@
+{% extends 'staffonly/base.html' %}
+
+{% block content %}
+<form method="post" action="{% url 'staffonly:register' %}"
+    {% csrs_token %}
+    {{ form.as_p}}
+
+{% endblock content %}

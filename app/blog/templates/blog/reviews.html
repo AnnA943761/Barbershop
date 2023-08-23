@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+
+{%block content%}
+    {% for review in reviews %}
+        {{ review.user_name }}
+        {{ review.content }}
+        {{ review.date_added}}
+        {{ review.grade }}
+    {% empty }
+     <p>Пока нет отзывов, напишите первый отзыв о нас</p>
+    {% endfor %}
+
+<p>
+   <a href="{% url 'blog:reviews' %}">Добавить отзыв</a>
+</p>
+
+{%endblock content%}

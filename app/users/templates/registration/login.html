@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+    <form method="post" action="{% url 'users:login' %}">
+        {% csrf_token %}
+        {{ form.as_p}}
+    <button name="sumbit">login</button>
+    <input type="text" name="data" value="{% url 'blog:home' %}">
+    </form>
+
+{% endblock content %}
