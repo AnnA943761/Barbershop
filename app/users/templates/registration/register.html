@@ -1,8 +1,0 @@
-{% extends 'blog/base.html' %}
-
-{% block content %}
-<form method="post" action="{% url 'users:register' %}"
-    {% csrs_token %}
-    {{ form.as_p}}
-
-{% endblock content %}

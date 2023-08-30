@@ -1,7 +1,7 @@
-{% extends "blog/base.html" %}
+{% extends "staffonly/base.html" %}
 
 {% block content %}
-<form action="{% url 'blog:create_post' %}" method="post">
+<form action="{% url 'staffonly:create_post' %}" method="post">
     {% csrf_token %}
     {{form.as_p}}
     <button name="submit">Сохранить пост</button>

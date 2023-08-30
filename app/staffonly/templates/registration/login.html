@@ -5,7 +5,8 @@
         {% csrf_token %}
         {{ form.as_p}}
     <button name="sumbit">login</button>
-    <input type="text" name="data" value="{% url 'staffonly:home' %}">
+    <input type="text" name="data" value="{% url 'staffonly:base' %}">
     </form>
 
 {% endblock content %}
+

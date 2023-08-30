@@ -39,10 +39,10 @@
         <li class="nav-item">
           {% if user.is_authenticated %}
             Пользователь {{ user.username }} аторизирован
-            <a href="{% url 'users:loguot' %}">Выйти из аккаунта</a>
+            <a href="{% url 'staffonly:loguot' %}">Выйти из аккаунта</a>
           {% else %}
-            <a href="{% url 'users:login' %}">Авторизироваться</a>
-            <a href="{% url 'user:register' %}">Регистрация</a>
+            <a href="{% url 'staffonly:login' %}">Авторизироваться</a>
+            <a href="{% url 'staffonly:register' %}">Регистрация</a>
           {% endif %}
       </li>
       </ul>
