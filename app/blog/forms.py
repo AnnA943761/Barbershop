@@ -1,11 +1,6 @@
 from django import forms
 
-from .models import Post, Review
-
-class PostForm(forms.ModelForm):
-    class Meta:
-        model = Post
-        fields = ["title", "content"]
+from blog.models import Review
 
 class ReviewForm(forms.ModelForm):
     class Meta:

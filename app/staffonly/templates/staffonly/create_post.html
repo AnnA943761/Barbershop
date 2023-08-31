@@ -3,7 +3,7 @@
 {% block content %}
 <form action="{% url 'staffonly:create_post' %}" method="post">
     {% csrf_token %}
-    {{form.as_p}}
+    {{ form.as_p }}
     <button name="submit">Сохранить пост</button>
 </form>
 

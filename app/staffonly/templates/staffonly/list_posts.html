@@ -1,0 +1,23 @@
+{% extends "staffonly/base.html" %}
+
+{% block content %}
+
+{% for post in posts %}
+    <p>{{ post.title }}</p>
+    <p>{{ post.content }}</p>
+    <a href = "{% url 'staffonly:detail_post' post.id%}">Ссылка на пост</a>
+    <form action="{% url 'staffonly:delete_post' post_id %}" method="post">
+        {% csrf_token %}
+        <input type="submit"
+    </form>
+    {% empty %}
+    <p>Новостей пока нету</p>
+{% endfor %}
+<br>
+<br>
+
+<p>
+    <a href="{% url 'staffonly:create_post'%}">Добавить пост</a>
+</p>
+
+{% endblock content %}

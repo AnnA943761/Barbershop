@@ -1,0 +1,7 @@
+{% extends "staffonly/base.html" %}
+
+{%block content%}
+    Title:<p>{{ post.title }}</p>
+    Content:<p>{{ post.content }}</p>
+    <a href="{% url 'staffonly:edit_post' post.id %}"method="post"></a>
+{%endblock content%}

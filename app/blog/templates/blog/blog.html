@@ -1,10 +1,11 @@
-{% extends "blog/base.html" %}
+{% extends "staffonly/base.html" %}
 
 {%block content %}
 
 {% for post in posts %}
    {{ post.title }}
    {{ post.content }}
+   
    {% empty }
    <p>Новостей пока нету</p>
 {% endfor %}

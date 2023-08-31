@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Review
-from .forms import PostForm, ReviewForm
+from blog.forms import ReviewForm
 
 # Create your views here.
 
