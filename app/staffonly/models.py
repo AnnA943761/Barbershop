@@ -1,6 +1,8 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
+from django.db import models
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 class Post(models.Model):
     title = models.CharField(verbose_name="Заголовок", max_length=200, blank=False)
@@ -10,3 +12,19 @@ class Post(models.Model):
 
     def __str__(self) -> str:
         return self.title
+
+
+
+
+class Master(AbstractBaseUser):
+    email = models.CharField(verbose_name="Email", max_length=10, blank=False, default="None")
+    phone = models.CharField(verbose_name="Телефон", max_length=10, blank=False, default="None")
+    first_name = models.CharField(verbose_name="Имя", max_length=10, blank=False, default="None")
+    last_name = models.CharField(verbose_name="Фамилия", max_length=10, blank=False, default="None")
+
+   
+
+    USERNAME_FIELD = 'email'
+
+    def __str__(self) -> str:
+        return self.first_name

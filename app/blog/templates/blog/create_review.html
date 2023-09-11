@@ -1,10 +1,10 @@
-{% extends "staffonly/base.html" %}
+{% extends "blog/base.html" %}
 
 {% block content %}
-<form action="{% url 'staffonly:create_review' %}" method="post">
+<form action="{% url 'blog:create_review' %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button name="submit">Сохранить пост</button>
+    <button name="submit">Сохранить отзыв</button>
 </form>
 
 {% endblock content %}

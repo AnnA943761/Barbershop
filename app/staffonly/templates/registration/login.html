@@ -3,9 +3,8 @@
 {% block content %}
     <form method="post" action="{% url 'staffonly:login' %}">
         {% csrf_token %}
-        {{ form.as_p}}
-    <button name="sumbit">login</button>
-    <input type="text" name="data" value="{% url 'staffonly:base' %}">
+        {{ form.as_p }}
+    <button name="submit">Login</button>
     </form>
 
 {% endblock content %}

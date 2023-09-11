@@ -1,12 +1,12 @@
 from django.urls import path
 
-from .views import home, list_reviews, create_reviews
+from .views import home, ListReviews, ListPosts, CreateReview
 
 app_name = "blog"
 
 urlpatterns = [
     path("", home, name="home"),
-    path("reviews/", list_reviews, name = "list_reviews"),
-    path("create_review", create_reviews, name="create_review"),
-    
+    path("blog/", ListPosts.as_view(), name="blog"),
+    path("reviews/", ListReviews.as_view(), name="list_reviews"),
+    path("create_review/", CreateReview.as_view(), name="create_review")
 ]
